@@ -26,10 +26,22 @@ namespace PMS
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            Window1 w1 = new Window1(customername.Text, "dfs", Phoneno.Text, Symptoms.Text,Total.Text,datepick);
-            
-            this.Hide();
-            this.Owner.Show();
+
+            if (gridcontrol.Children
+        .OfType<TextBox>()
+        .Any(tb => string.IsNullOrEmpty(tb.Text)))
+                MessageBox.Show("Please check all textboxes");
+            else
+            {
+                Window1 w = new Window1();
+                this.Hide();
+                //send list to the window1.xaml.cs for converting into listboxitem. Also, override the ToString() of the customer class;
+                //update dashboard
+                w.updateDashboardClick(new Customer(id.Text, customername.Text, Street.Text, city.SelectedValue.ToString(), state.SelectedValue.ToString(), Phoneno.Text, Symptoms.Text,
+                    Total.Text, datepick.Text));
+                w.Show();
+            }
         }
+        
     }
 }

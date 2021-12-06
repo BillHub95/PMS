@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PMS"
         mc:Ignorable="d"
-         WindowStartupLocation="CenterScreen"  AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize"   WindowStyle="None" Title="MainWindow" Height="616" Width="586">
+      Icon="C:\Users\James\Downloads\medicine.png"   WindowStartupLocation="CenterScreen"  AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize"   WindowStyle="None" Title="MainWindow" Height="616" Width="586">
     <Grid>
 
         <Rectangle Fill="#403f44" HorizontalAlignment="Center" Width="584" RadiusX="10" RadiusY="10" Height="614" VerticalAlignment="Center"/>

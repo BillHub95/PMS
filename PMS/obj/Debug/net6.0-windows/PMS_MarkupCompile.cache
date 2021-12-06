@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\James\source\repos\PMS\PMS\App.xaml
-3-1170174932
+5-1724752682
 
-5-1074088246
+71548030868
 194-164764702
-AddCustomer.xaml;MainWindow.xaml;Window1.xaml;
+AddCustomer.xaml;DeleteCustomer.xaml;MainWindow.xaml;UpdateCustomer.xaml;Window1.xaml;
 
 False
 

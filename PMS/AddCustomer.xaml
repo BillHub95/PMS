@@ -5,36 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PMS"
         mc:Ignorable="d"
-        Title="AddCustomer" Height="450" Width="363" Icon="/medicine.png">
-    <Grid Background="#403f44">
+        Title="AddCustomer" Height="450" Width="382" Icon="C:/Users/James/Downloads/medicine.png">
+    <Grid x:FieldModifier="public" Name="gridcontrol" Background="#403f44">
         <Label FontSize="15" FontWeight="Bold" Foreground="White" Content="Add customer" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Name" Foreground="White" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="customername" HorizontalAlignment="Left" Margin="57,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
+        <TextBox x:FieldModifier="public" x:Name="customername" HorizontalAlignment="Left" Margin="57,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117"/>
         <Label Content="Address" Foreground="White" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top"/>
         <Label Content="Phone No." Foreground="White" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Phoneno" HorizontalAlignment="Left" Margin="80,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:FieldModifier="public" x:Name="Phoneno" HorizontalAlignment="Left" Margin="80,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
         <Label Content="Symptoms" Foreground="White" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Symptoms" HorizontalAlignment="Left" Margin="80,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:FieldModifier="public" x:Name="Symptoms" HorizontalAlignment="Left" Margin="80,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
         <Label Content="Total" Foreground="White" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Total" HorizontalAlignment="Left" Margin="57,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:FieldModifier="public" x:Name="Total" HorizontalAlignment="Left" Margin="57,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
         <Label Content="DateOfVisit" Foreground="White" HorizontalAlignment="Left" Margin="10,292,0,0" VerticalAlignment="Top"/>
-        <DatePicker Name="datepick" BorderThickness="0" Margin="90,292,64,81"/>
-        <Button Click="Add_Click" Background="#FF3260FF" Content="Add" HorizontalAlignment="Center" Margin="0,358,0,0" VerticalAlignment="Top" Width="64">
+        <Button x:FieldModifier="public" Name="addbutton" Click="Add_Click" Background="#FF3260FF" Content="Add" HorizontalAlignment="Center" Margin="0,358,0,0" VerticalAlignment="Top" Width="64">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <ComboBox Text="City" HorizontalAlignment="Left" Margin="68,102,0,0" VerticalAlignment="Top" Width="76">
-            <ComboBoxItem Content="Rawalpindi"></ComboBoxItem>
-            <ComboBoxItem Content="ISB"></ComboBoxItem>
-            <ComboBoxItem Content="Multan"></ComboBoxItem>
-            <ComboBoxItem Content="Faisalabad"></ComboBoxItem>
-            <ComboBoxItem Content="Quetta"></ComboBoxItem>
+        <ComboBox x:FieldModifier="public" Name="city" SelectedValuePath="Content" Text="City" HorizontalAlignment="Left" Margin="168,102,0,0" VerticalAlignment="Top" Width="86">
+            <ComboBoxItem x:FieldModifier="public" Name="rwp" Content="Rawalpindi"></ComboBoxItem>
+            <ComboBoxItem  x:FieldModifier="public" Name="isb" Content="ISB"></ComboBoxItem>
+            <ComboBoxItem x:FieldModifier="public" Name="multan" Content="Multan"></ComboBoxItem>
+            <ComboBoxItem x:FieldModifier="public" Name="fsd" Content="Faisalabad"></ComboBoxItem>
+            <ComboBoxItem x:FieldModifier="public" Name="quetta" Content="Quetta"></ComboBoxItem>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="160,102,0,0" VerticalAlignment="Top" Width="76"/>
-        <ComboBox HorizontalAlignment="Left" Margin="255,102,0,0" VerticalAlignment="Top" Width="76"/>
+        <ComboBox x:FieldModifier="public" SelectedValuePath="Content" Name="state"  HorizontalAlignment="Left" Margin="259,102,0,0" VerticalAlignment="Top" Width="98">
+            <ComboBoxItem x:FieldModifier="public" Name="Punjab" Content="Punjab"></ComboBoxItem>
+            <ComboBoxItem  x:FieldModifier="public" Name="Balochistan" Content="Balochistan"></ComboBoxItem>
+        </ComboBox>
+        <TextBox  Name="Street"  HorizontalAlignment="Left" Margin="68,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="22"/>
+        <Label Content="Enter street below" Foreground="White" HorizontalAlignment="Left" Margin="64,72,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:FieldModifier="public" x:Name="datepick" BorderThickness="0" Margin="90,292,74,81"/>
+        <TextBox Name="id" HorizontalAlignment="Left" Margin="237,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ID" Foreground="White" HorizontalAlignment="Left" Margin="208,52,0,0" VerticalAlignment="Top" Height="31"/>
 
     </Grid>
 </Window>

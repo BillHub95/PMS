@@ -6,21 +6,44 @@
         xmlns:local="clr-namespace:PMS"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Background="#403f44" Height="700" Width="1100" Icon="/medicine.png">
+     Name="windows" WindowStartupLocation="CenterScreen"   Background="#403f44" Height="700" Width="1100" Icon="/medicine.png">
 
     <Grid>
         <Rectangle Fill="#403f44" Margin="0,0,0,597" ></Rectangle>
         <Label BorderThickness="0" FontWeight="Bold" FontSize="28" Content="Dashboard" VerticalContentAlignment="Center" Background="#403f44" Foreground="White" Margin="4,-12,910,597"></Label>
         <StackPanel Orientation="Vertical" Margin="0,92,875,0">
-            <Button FontSize="22" FontWeight="DemiBold" Height="69" Content="Customers" Click="add_customer_click"/>
+            <Button FontSize="22" FontWeight="DemiBold" Height="69" Content="Customers"/>
         </StackPanel>
-        <Rectangle Margin="230,92,0,0"/>
-        <StackPanel Orientation="Horizontal" Margin="230,92,10,538">
-            <TextBlock TextAlignment="Center" Text="Name" Foreground="White" Width="100" Height="22"></TextBlock>
-            <TextBlock TextAlignment="Center" Text="Name" Foreground="White" Width="100" Height="22"></TextBlock>
-            <TextBlock TextAlignment="Center" Text="Name" Foreground="White" Width="100" Height="22"></TextBlock>
-            <TextBlock TextAlignment="Center" Text="Name" Foreground="White" Width="100" Height="22"></TextBlock>
-            <TextBlock TextAlignment="Center" Text="Name" Foreground="White" Width="100" Height="22"></TextBlock>
-        </StackPanel>
+        <Rectangle Margin="230,92,0,10"/>
+        <!--restore the height again-->
+        <DataGrid Name="gridview" Margin="230,92,10,109"/>
+        <Button FontWeight="Bold" FontSize="18" Name="addcustomerbutton" Content="Add customer" HorizontalAlignment="Left" Margin="230,601,0,0" VerticalAlignment="Top" Height="51" Width="149" Click="add_customer_click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button FontWeight="Bold" FontSize="18" Name="deletecustomerbutton" Content="Delete customer" HorizontalAlignment="Left" Margin="395,601,0,0" VerticalAlignment="Top" Height="51" Width="166" Click="deletecustomer">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button FontWeight="Bold" FontSize="18" x:Name="updatecustomer" Content="Update Customer" HorizontalAlignment="Left" Margin="577,601,0,0" VerticalAlignment="Top" Height="51" Width="166" Click="Updatecustomerclick">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button FontWeight="Bold" FontSize="18" x:Name="viewcustomerbutton" Content="View Customers" HorizontalAlignment="Left" Margin="768,601,0,0" VerticalAlignment="Top" Height="51" Width="166" Click="viewcustomerclick">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>
